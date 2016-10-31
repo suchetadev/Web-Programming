@@ -1,0 +1,77 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 3, 2016, 4:21:18 PM
+    Author     : sucheta
+*/
+
+header h1{
+    
+    font-family:'Nixie One';
+    color: brown;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 100;
+}
+
+table{
+   
+    /*height: 700px;*/
+    /*width: 600px;*/
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, .5);
+    /*border: 1px solid black;*/
+}
+
+table th{
+    
+    color: gray;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 3px;
+    width: 250px;
+    height : 50px;
+    /*border: 1px solid black;*/
+}
+
+table td{
+
+    text-align: right;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    width: 250px;
+    height : 50px;
+    /*border: 1px solid black;*/
+}
+
+main label{
+	
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    color: black;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    word-spacing: 5px;
+    
+}
+
+.left{
+    
+    text-align: left;
+}
+
+footer{
+	
+    background-color: #708090;
+    height: 80px;
+    bottom: 0;
+    position: absolute;
+    width : 100%;
+}
