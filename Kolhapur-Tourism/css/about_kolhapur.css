@@ -1,0 +1,67 @@
+/**************************************************************
+*Description: Style sheet for the html page about_kolhapur.html.
+*Author: 	  Sucheta Suresh Patil
+***************************************************************/
+
+header{
+	
+	height: 475px;
+	background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+	url("../images/palace.jpg");
+	background-repeat: no-repeat;
+}
+ul{
+	
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	float: right;
+}
+li{
+	
+	float: left;
+}
+li a{
+	
+	display: block;
+	text-align: center;
+	word-spacing: 6px;
+	font-family: Verdana, Sans-serif;
+	font-size: 17px;
+	padding: 14px 16px;
+	color: white;
+	text-decoration: none;
+}
+li a:hover{
+	
+	background-color: #000080;
+}
+
+header h2{
+	
+	font-family:'Nixie One';
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	text-align: center;
+	font-size: 55px;
+	font-weight: 100;
+}
+div.sansserif{
+	
+	text-decoration: none;
+	letter-spacing: 2px;
+	line-height: 1.5;
+	word-spacing: 5px;	
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: black;
+	text-align: justify;
+}

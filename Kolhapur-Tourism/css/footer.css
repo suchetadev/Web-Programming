@@ -1,0 +1,38 @@
+/**************************************************************
+*Description: Style sheet for the footer.
+*Author: 	  Sucheta Suresh Patil
+***************************************************************/
+
+footer{
+	
+	background-color: #708090;
+	height: 303px;
+
+}
+table.footer_table{
+	
+	border-collapse: collapse;
+	border: 1;
+	padding: 10px;
+	width: 100%;
+	table-layout: fixed;
+}
+td.footer_td,th.footer_th{
+	
+	padding: 10px;
+}
+tr.footer_tr{
+	
+	background-color: #708090;
+	text-align: left;
+}
+td.footer_td a{
+	
+	font-size: 17px;
+	color: #D3D3D3;
+	text-decoration: none;
+}
+th.footer_th{
+	
+	color: 	#2F4F4F;
+}

@@ -1,0 +1,74 @@
+/**************************************************************
+*Description: Style sheet for the html page Kolhapur special foods.
+*Author: 	  Sucheta Suresh Patil
+***************************************************************/
+
+header{
+	
+	height: 475px;
+	background-image: url("../images/food.jpg");
+	background-repeat: no-repeat;
+	
+}
+ul{
+	
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	float: right;
+}
+li{
+	
+	float: left;
+}
+li a{
+	
+	display: block;
+	text-align: center;
+	word-spacing: 6px;
+	font-family: Verdana, Sans-serif;
+	font-size: 17px;
+	padding: 14px 16px;
+	color: white;
+	text-decoration: none;
+}
+li a:hover{
+	
+	background-color: #000080;
+}
+main{
+	
+	padding: 25px;
+    margin: 25px;
+
+}
+#style1{
+		
+	font-family: serif;
+	font-size: 30px;
+	overflow:hidden; 
+	white-space:nowrap;
+}
+p.sansserif{
+	
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #778899;
+	text-align: justify;
+	text-decoration: none;
+	letter-spacing: 2px;
+	line-height: 1.5;
+	word-spacing: 5px;
+
+}
+.images{
+	
+	overflow: auto;
+}
+.image1{
+	
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 25px;
+}

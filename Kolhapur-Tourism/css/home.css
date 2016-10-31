@@ -1,0 +1,72 @@
+/**************************************************************
+*Description: Style sheet for the home page of Kolhapur Tourisum
+*Author: 	  Sucheta Suresh Patil
+***************************************************************/
+
+header{
+	
+	height: 575px;
+	background-image: url("../images/palace.jpg");
+	background-repeat: no-repeat;
+	
+}
+ul{
+	
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	float: right;
+
+}
+li{
+	float: left;
+}
+li a{
+	
+	display: block;
+	text-align: center;
+	word-spacing: 6px;
+	font-family: Verdana, Sans-serif;
+	font-size: 17px;
+	padding: 14px 16px;
+	color: white;
+	text-decoration: none;
+}
+li a:hover{
+	
+	background-color: #000080;
+}
+
+main{
+	
+	padding: 25px;
+    margin: 25px;
+
+}
+main p,main div{
+	
+	-webkit-column-count: 2;
+	column-count: 2;
+	-webkit-column-gap: 40px;
+	column-gap: 40px;
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: black;
+	text-align: justify;
+	text-decoration: none;
+	letter-spacing: 2px;
+	line-height: 1.5;
+	word-spacing: 5px;
+}
+main div::first-letter {
+	
+    font-size: 200%;
+	color: red;
+}
+#hover1{
+	
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: red;
+}

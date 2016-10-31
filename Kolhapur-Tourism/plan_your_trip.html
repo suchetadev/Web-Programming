@@ -1,0 +1,189 @@
+<!doctype html>
+
+<!--
+	This document displays Plan your trip form
+-->
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Plan your trip....</title>
+		<link rel="stylesheet" href="./css/normalize.css">
+		<link rel="stylesheet" href="./css/footer.css">
+		<link rel="stylesheet" href="./css/plan_your_trip.css">
+		<link type="text/javascript" rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+		
+		<script>
+			
+			function getDestinationPrice() {
+				var total_destination_price = 0;
+				
+				var checked_value = 0; 
+				var inputElements = document.getElementsByClassName("destinationCheckBox");			
+				for(var i=0; inputElements[i]; ++i){
+					if(inputElements[i].checked){
+						checked_value = inputElements[i].value;
+						total_destination_price = total_destination_price + parseInt(checked_value);
+					}
+				}
+				return total_destination_price;
+			}
+			
+			function getTravelPrice() {
+				var travel_price=0;
+				
+				if(document.getElementById("taxi_id").checked) {
+				 travel_price=7;				}
+				else if(document.getElementById("cab_id").checked){
+				 travel_price=10;
+				}
+				else if(document.getElementById("transit_id").checked) {
+				 travel_price=5;
+				}
+				
+			return travel_price;
+			}
+			
+			function totalPrice() {
+			
+				var total = getTravelPrice()+ getDestinationPrice();
+				
+				document.getElementById("total_id").value = total;
+				
+				var tax = (total * 0.1);
+				document.getElementById("tax_id").value = tax;
+				
+				var final_total = total + tax;
+				document.getElementById("final_id").value = final_total;
+	
+			}
+			
+			function readText(){
+				var xhttp;
+				if(window.XMLHttpRequest){
+					xhttp = new XMLHttpRequest();
+				}
+				else{
+					alert("inside else");
+					xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				
+				xhttp.onreadystatechange = function(){
+					if(xhttp.readyState == 4 && xhttp.status == 200){
+						document.getElementById("textarea_id").innerHTML = xhttp.responseText;
+					}
+				};
+				
+				xhttp.open("GET","./file_ajax.html",true);
+				xhttp.send();
+			
+			}
+			
+		</script>
+	</head>
+	<body>
+		<header>  
+				<ul>
+					<li><a href="Home.html" title="Home">Home</a></li> 
+					<li><a href="" title="About Kolhapur">About Kolhapur</a></li>
+					<li><a href="reach_kolhapur.html" title="How to reach">How to reach?</a></li>
+					<li><a href="pickup_form.php" title="Booking">Booking</a></li>
+					<li><a href="plan_your_trip.html" title="Plan your trip">Plan your trip</a></li>
+					<li><a href="login_form.php" title="Login">Login</a></li>
+				</ul>
+				<br><br><br>
+				<h1>Plan your Trip </h1>
+		</header>
+		
+		<main>
+		
+			<form id="myform_id" method="get" action="" name="myform">
+			<br>
+			
+			<table>
+				<tr>
+					<td id="table_header"> Choose your Destination(s) </td>
+				<tr>
+					<td><input type="checkbox" class="destinationCheckBox" name="Rankala" value="30" id="rankala_id">	Rankala Lake ($30)</input></td>
+					<td><input type="checkbox" class="destinationCheckBox" name="Mahalaxmi" value="45" id="mahalaxmi_id"> Mahalaxmi Temple ($45)</input></td>
+					<td><input type="checkbox" class="destinationCheckBox" name="NewPalace" value="40" id="newpalace_id">	New Palace ($40)</input></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" class="destinationCheckBox" name="Jyotiba" value="35" id="jyotiba_id"> Jyotiba ($35)</input></td>
+					<td><input type="checkbox" class="destinationCheckBox" name="Radhanagari" value="50"  id="radha_id"> Radhanagari Dam ($50)</input></td>
+					<td><input type="checkbox" class="destinationCheckBox" name="Panhala" value="55" id="panhala_id"> Panhala Fort ($55)</input></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" class="destinationCheckBox" name="Kaneri" value="30" id="kaneri_id"> Kaneri Math ($30)</input></td>
+					<td><input type="checkbox" class="destinationCheckBox" name="Khidrapur" value="60" id="khidrapur_id"> Khidrapur ($60)</input></td>
+				</tr>
+			</table>
+			<br><br>
+			<table>
+				<tr>
+					<td id="table_header1">Travel options</td>
+				<tr>
+					<td><input id="taxi_id" type="radio" name="selectedtravel" value="Taxi">	Taxi ($7)</input></td>
+					<td><input id="cab_id" type="radio" name="selectedtravel" value="Cab">	Cab ($10)</input></td>
+					<td><input id="transit_id" type="radio" name="selectedtravel" value="AC_Transit">	AC Transit ($5) </input></td>
+				</tr>
+			</table>
+			
+			<br><br>
+			
+		
+			<label for="total_txt"> Total :</label><input id="total_id" type="text" name="total_txt" readonly placeholder="0.0"> </input>
+			<br><br>
+			<label for="tax_txt"> Tax :</label> <input id="tax_id" type="text" name="tax_txt" readonly placeholder="0.0"> </input>
+			<br><br>
+			<label for="final_txt"> Final Total :</label><input id="final_id" type="text" name="final_txt" readonly placeholder="0.0"> </input>
+			<br><br>
+			<input type="button" value="Read terms and conditions" onclick="readText();"></input>
+			<p id="textarea_id"></p>
+			<input type="button" id="calculate_id" name="calculate" value="Calculate" onclick="totalPrice();"></input>
+			
+			</form>
+			
+			
+		</main>
+		
+		<footer>
+			<br><br>
+			<table class="footer_table">
+				<tr class="footer_tr">
+					<th class="footer_th">Useful Links</th>
+					<th class="footer_th">What to do in Kolhapur?</th>
+					<th class="footer_th">Food</th>
+					<th class="footer_th">Near by</th>
+					<th class="footer_th">My account</th>
+				</tr>
+				<tr class="footer_tr">
+					<td class="footer_td"><a href="" title="Shivaji Universty">Shivaji Universty</a></td>
+					<td class="footer_td"><a href="food_kolhapur.html" title="Kolhapuri Special Foods">Kolhapuri Special Foods</a></td>
+					<td class="footer_td"><a href="" title="Kolhapuri Nonveg Food">Kolhapuri Nonveg Food</a></td>
+					<td class="footer_td"><a href="" title="Kokan">Konkan</a></td>
+					<td class="footer_td"><a href="login_form.php" title="Login">Login</a></td>
+				</tr>
+				<tr class="footer_tr">
+					<td class="footer_td"><a href="" title="Red bus">Red bus</a></td>
+					<td class="footer_td"><a href="" title="Entertainment">Entertainment</a></td>
+					<td class="footer_td"><a href="" title="Special foods">Special foods</a></td>
+					<td class="footer_td"><a href="" title="Mahabaleshwar">Mahabaleshwar</a></td>
+					<td class="footer_td"><a href="registration.php" title="Register">Register</a></td>
+				</tr>
+				<tr class="footer_tr">
+					<td class="footer_td"><a href="" title="Mahalaxmi temple">Mahalaxmi temple</a></td>
+					<td class="footer_td"><a href="" title="Festivals celebrated in Kolhapur">Festivals celebrated in Kolhapur</a></td>
+					<td class="footer_td"></td>
+					<td class="footer_td"><a href="" title="Satara">Satara</a></td>
+				</tr>
+			</table>			
+			<br><br><br>
+			<hr>
+			<div align="center">
+				Copyright 2016-2018 | All rights reserved | Sucheta Patil.
+			</div>
+		</footer>
+	</body>
+</html>

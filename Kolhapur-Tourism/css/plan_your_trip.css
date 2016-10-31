@@ -1,0 +1,120 @@
+/**************************************************************
+*Description: Style sheet for the html page plan_your_trip.html.
+*Author: 	  Sucheta Suresh Patil
+***************************************************************/
+
+header{
+	
+	height: 475px;
+	background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+	url("../images/palace.jpg");
+	background-repeat: no-repeat;
+}
+
+header h1{
+	font-family:'Nixie One';
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	text-align: center;
+	font-size: 95px;
+	font-weight: 100;
+}
+
+header h4{
+	font-family:'Nixie One';
+	position: absolute;
+	top: 43%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 100;
+}
+
+ul{
+	
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	float: right;
+}
+li{
+	
+	float: left;
+}
+li a{
+	
+	display: block;
+	text-align: center;
+	word-spacing: 6px;
+	font-family: Verdana, Sans-serif;
+	font-size: 17px;
+	padding: 14px 16px;
+	color: white;
+	text-decoration: none;
+}
+li a:hover{
+	
+	background-color: #000080;
+}
+main{
+    #background:  #E9E581;
+	 background: #f0eea8;
+	padding: 25px;
+    margin: 25px;
+	border-radius: 15px;
+
+}
+main div{
+	
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 45px;
+	font-style: italic;
+    overflow:hidden; 
+	white-space:nowrap;
+}
+main table{
+	width: 100%;
+	height: 100%;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-align: left;
+	padding: 15px;
+	table-layout: fixed;
+	
+	border-radius: 25px;
+    border: 2px solid #73AD21;
+}
+main table td{
+	padding: 20px;
+	font-size: 20px;	
+}
+
+#table_header,#table_header1{
+	font-size: 1.4em;
+	border-radius: 15px;
+    height: 12px;
+    display: inline-block;
+    text-align: center;
+}
+
+input[type="text"] {
+	
+	margin-left: .6em;
+	margin-bottom: .5em;
+	
+	
+}
+label{
+    float: left;
+	width: 150px;
+}
+

@@ -1,0 +1,116 @@
+/**************************************************************
+*Description: Style sheet for the login_form.php
+*Author: 	  Sucheta Suresh Patil
+***************************************************************/
+
+
+header h1{
+	font-family:'Nixie One';
+	color: black;
+	text-align: center;
+	font-size: 55px;
+	font-weight: 100;
+}
+
+main{
+	
+	padding: 25px;
+    margin: 70px;
+	border: 2px solid black;
+	border-radius: 15px;
+	height: 430px;
+	width: 500px;
+	margin-left: 400px;
+	
+}
+
+#header{
+	
+	font-size: 25px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	letter-spacing: 2px;
+	line-height: 1.5;
+	word-spacing: 5px;
+	margin-bottom: 20px;
+
+}
+
+main label{
+	
+	font-size: 20px;
+	font-family: "Times New Roman", Times, serif;
+	color: black;
+	text-align: justify;
+	text-decoration: none;
+	letter-spacing: 1.5px;
+	line-height: 1.5;
+	word-spacing: 5px;
+	margin-left: 120px;
+	margin-right: 50px;
+	
+}
+input[type=text],input[type=password]{
+    
+	width: 300px;
+	height: 35px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+	margin-left: 120px;
+}
+
+input[type=submit]{
+	
+	width: 300px;
+	height: 35px;
+	background-color: gray;
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    text-decoration: none;
+    margin-top: 40px;
+    cursor: pointer;
+	margin-left: 120px;
+	margin-bottom: 20px;
+}
+footer{
+	
+	background-color: #708090;
+	height: 80px;
+
+}
+hr{
+	color: gray;
+}
+#new_user{
+	
+	color: gray;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 20px;
+	text-align: center;
+	
+}
+input[type=button]{
+
+	width: 300px;
+	height: 35px;
+	background-color: gray;
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    text-decoration: none;
+    margin-top: 10px;
+    cursor: pointer;
+	margin-left: 120px;
+	margin-bottom: 20px;
+	
+}
+.error{
+	
+	color: red;
+	text-align: center;
+	margin-left: 120px;
+}
