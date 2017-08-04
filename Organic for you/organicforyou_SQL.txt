@@ -1,0 +1,26 @@
+CREATE DATABASE `OrganicForYou` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+CREATE TABLE `Product` (
+  `productId` int(11) NOT NULL AUTO_INCREMENT,
+  `productType` varchar(45) NOT NULL,
+  `productName` varchar(45) NOT NULL,
+  `productCost` decimal(5,2) NOT NULL,
+  `productOldCost` decimal(5,2) NOT NULL,
+  `productUnit` varchar(45) NOT NULL,
+  `productQuantity` int(11) NOT NULL,
+  `productImgSrc` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`productId`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `User` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstName` varchar(45) NOT NULL,
+  `lastName` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `phoneNumber` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `passwordConfirm` varchar(45) NOT NULL,
+  `role` varchar(45) NOT NULL DEFAULT 'ROLE_USER',
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=latin1;
+
